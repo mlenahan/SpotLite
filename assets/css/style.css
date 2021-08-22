@@ -1,0 +1,103 @@
+:root {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+    /* https://material.io/design/color/the-color-system.html#color-theme-creation */
+    --primary-main: #01579B;
+    --primary-variant: #0277BD;
+    --secondary-main: #0288D1;
+    --secondary-variant: #039BE5;
+    --surface-main: #E1F5FE;
+    --background-main: #ffffff;
+    --secondary-text: #F5FCFF;
+
+
+    /* Font System */
+
+  /* Font face */
+  --primary-font: 'Roboto', sans-serif;
+
+  /* Type scale */
+
+  /* H1 */
+  --font-size-h1: 46px;
+  --font-weight-h1: 700;
+  --font-letter-spacing-h1: -1px;
+
+  /* H2 */
+  --font-size-h2: 36px;
+  --font-weight-h2: 700;
+  --font-letter-spacing-h2: -1px;
+
+  /* H3 */
+  --font-size-h3: 24px;
+  --font-weight-h3: 700;
+  --font-letter-spacing-h3: -1px;
+
+  /* Subtitle */
+  --font-size-subtitle: 24px;
+  --font-weight-subtitle: 500;
+  --font-letter-spacing-subtitle: -1px;
+  --line-height: 28px;
+
+  /* Body */
+  --font-size-body: 16px;
+  --font-weight-body: 500;
+  --font-letter-spacing-body: 0.5px;
+
+  /* Boldtext */ 
+  --font-size-boldtext: 16px;
+  --font-weight-boldtext: 700;                  
+  --font-letter-spacing-boldtext: 0.5px;
+
+  /* Small */
+  --font-size-small: 14px;
+  --font-weight-small: 500;
+  --font-letter-spacing-body: 0.5px;
+
+  /* Pretitle */
+  --font-size-pretitle: 10px;
+  --font-weight-pretitle: 500;
+  --font-letter-spacing-pretitle: 0.5px;
+
+  /* Button */
+  --font-size-button: 16px;
+  --font-weight-button: 500;
+  --font-letter-spacing-button: 0.5px;
+  --font-line-height: 12px;
+
+  /* Spacing */
+  --spacing-gutter: 16px;
+  --spacing-container-gutter: 0px;
+  --spacing-paragraph-gap: 8px;
+  --spacing-section-padding-between: 16px;
+  --spacing-nav-height: 64px;
+  --spacing-button-padding: 8px 16px;
+  --spacing-line-height: 32px;
+
+  /* Borders */
+  --border-thickness: 1px;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0px;
+    min-height: 100vh;
+  }
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+    background-color: var(--primary-main);
+    color: var(--secondary-text);
+}
+  
+.music-form {
+    background-color: var(--surface-main);
+    color:var(--primary-main);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+}
