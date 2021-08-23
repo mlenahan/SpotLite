@@ -127,6 +127,10 @@ a:hover {
     padding: 1em;
 }
 
+h1 {
+  color: var(--primary-main);
+}
+
 h2 {
   color: var(--secondary-main);
   font-weight: var(--font-weight-h2);
@@ -162,3 +166,8 @@ input[type=submit]:hover {
   background-color: var(--primary-variant);
 }
 
+/* Results page */
+
+.container {
+  margin: 3em;
+}
