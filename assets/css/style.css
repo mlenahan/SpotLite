@@ -84,15 +84,37 @@ body {
   min-height: 100vh;
   }
 
-header {
-  background: var(--primary-main);
-  color:var(--surface-main);
-  font-size: var(--font-size-subtitle);
-  font-weight: 500;
-  padding: 0 var(--spacing-gutter);
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--primary-main);
+}
+  
+li {
+  float: right;
+}
+  
+li a {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 50px;
+  color:var(--secondary-text);
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  }
+
+a:hover {
+  text-decoration: underline;
+}
+
+#site-name {
+  color: var(--secondary-text);
+  float: left;
 }
 
 .music-form {
@@ -108,30 +130,6 @@ header {
 h2 {
   color: var(--secondary-main);
   font-weight: var(--font-weight-h2);
-}
-
-span {
-  color: var(--secondary-text);
-}
-
-a {
-  text-decoration: none;
-  color: var(--secondary-text);
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  list-style-type: none;
-}
-
-header ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: var(--spacing-nav-height);
 }
 
 label {
