@@ -84,20 +84,74 @@ body {
   }
 
 header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    
     height: 70px;
     background-color: var(--primary-main);
     color: var(--secondary-text);
 }
   
 .music-form {
-    background-color: var(--surface-main);
-    color:var(--primary-main);
     display: flex;
     flex-direction: column;
+    background-color: var(--surface-main);
+    color:var(--primary-main);
     width: 50%;
     margin: auto;
-    padding: 1rem;
+    padding: 1em;
+    border-radius: 2em;
 }
+
+h2 {
+  color: var(--secondary-main);
+  font-weight: var(--font-weight-h2);
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-text);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--spacing-nav-height);
+}
+
+label {
+  color: var(--secondary-main);
+  font-weight: var(--font-weight-subtitle);
+}
+
+input[type=submit] {
+  background-color:var(--primary-main);
+  color: var(--secondary-text);
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: var(--secondary-text);
+}
+
+input[type=submit]:hover {
+  background-color: var(--primary-variant);
+}
+
