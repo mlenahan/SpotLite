@@ -70,6 +70,7 @@
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
     <script>
         function parseForm(form) {
+            /* Gets values from form and renames for querystring parameters */
             const seed_artists = form.elements['artistname'].value;
             const seed_tracks = form.elements['songname'].value;
             const seed_genres = form.elements['genre'].value;
@@ -82,31 +83,34 @@
         }
 
         function handleSubmit(e) {
-            e.preventDefault();
+            // Default behaviour of form submit event is to reload page. Prevent this.
+            e.preventDefault(); 
+            // e.target refers to the element that fired the submit event, i.e. the form element.
             const form = e.target;
             const formData = parseForm(form);
-            console.log(formData);
+
             const recommendationsEndpoint = 'https://api.spotify.com/v1/recommendations'
-            // ?seed_artist=1235&seed_track=156324&genre=345326
+            // convert form data to query string parameters, e.g. 
             // seed_artists=skepta&seed_tracks=shutdown&seed_genres=rap
             const searchParams = new URLSearchParams(formData).toString();
-            console.log(searchParams);
             const fullUrl = recommendationsEndpoint + '?' + searchParams;
-            console.log(fullUrl)
 
             // pop smoke - 0eDvMgVFoNV3TpwtrVCoTj
             // song - 6Juv5N0dNU1imms9c9u1dA
+
+            // headers are passed with request. We need authorisation header (token) to authenticate with Spotify
             const headers = new Headers();
             const token =
                 'Bearer BQCKD9q4VODBxRHB8H0ZMtYWQpyz7Bfr_VXwL8Y4nBgL4pLaJ6iYcaJTULLa-ux8j5jUby7zSaN1K79V4JrqKyZWeNfzj2M-WsleZJY5goGxVRvhhsvngjMUvpANWvqYSHXwo1ATlpSc6sbRqKRiUCACgSSch40XnDlpsfdWjhoNEG0H6pWuhIhI3bYoeh2LdOcmhUS36nfh5rQw2I9lK8NrXyrAfQK5PG7-TB6JSPaZWAbFXqkyauWD8iiXmNbZMzRlQdv-VTvbHlwtFlU-ke_m7wTl-oGo-uIGjDhNA16SXcA'
             headers.append('Authorization', token);
-
+            // call the url with headers
             fetch(fullUrl, {
                 headers
             })
         }
 
         const form = document.getElementById('login-form');
+        // add custom form submit handler
         form.onsubmit = handleSubmit;
     </script>
 </body>
