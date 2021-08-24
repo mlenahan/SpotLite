@@ -147,28 +147,32 @@
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
 
+    <script src="js/millisToMinutesAndSeconds.js"></script>
+    <script src="js/parseTrack.js"></script>
     <script src="js/createMusicCard.js"></script>
     <script type="text/javascript" src="data/recommendationsSuccess.js"></script>
 
     <script>
-        // make sure to credit this
-        function millisToMinutesAndSeconds(millis) {
-            var minutes = Math.floor(millis / 60000);
-            var seconds = ((millis % 60000) / 1000).toFixed(0);
-            return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-        }
         // converts string of data to js object
         const parsedRecommendationsSuccess = JSON.parse(recommendationsSuccess);
-        console.log(parsedRecommendationsSuccess.tracks[0]);
-        const songTitle = parsedRecommendationsSuccess.tracks[0].name;
-        const artistName = parsedRecommendationsSuccess.tracks[0].artists[0].name;
-        const songDurationMs = parsedRecommendationsSuccess.tracks[0].duration_ms;
-        const songDuration = millisToMinutesAndSeconds(songDurationMs)
+
+        const parsedTracks = []
+        for (let i = 0; i < parsedRecommendationsSuccess.tracks.length; i++) {
+            const track = parsedRecommendationsSuccess.tracks[i];
+            const parsedTrack = parseTrack(track);
+            parsedTracks.push(parsedTrack);
+        }
+        console.log(parsedTracks)
+
         document.addEventListener("DOMContentLoaded", function (event) {
             const section = document.getElementById('results');
-            const musicCard = createMusicCard(songTitle, artistName, songDuration,
-                'assets/images/Energy_(Stay_Far_Away).png', 'shining star in space');
-            section.appendChild(musicCard);
+            for (let i = 0; i < parsedTracks.length; i++) {
+                const parsedTrack = parsedTracks[i];
+                const musicCard = createMusicCard(parsedTrack.songTitle, parsedTrack.artistName, parsedTrack
+                    .songDuration,
+                    'assets/images/Energy_(Stay_Far_Away).png', 'shining star in space');
+                section.appendChild(musicCard);
+            }
         });
     </script>
 </body>
