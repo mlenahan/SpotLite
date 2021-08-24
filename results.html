@@ -12,26 +12,27 @@
 <body>
     <header>
         <nav>
-            
+
             <ul id="menu">
-                
+
                 <li id='site-name'>
                     <a href='index.html'>Song City</a>
                 </li>
 
                 <li>
                     <a href="https://github.com/mlenahan" target="_blank" rel="noopener"
-                    aria-label="Visit my GitHub page (opens in a new tab)">GitHub<i class="fab fa-github"></i></a>
+                        aria-label="Visit my GitHub page (opens in a new tab)">GitHub<i class="fab fa-github"></i></a>
                 </li>
 
                 <li>
                     <a href="https://www.linkedin.com/in/michael-lenahan-84b445135/" target="_blank" rel="noopener"
-                    aria-label="Visit my linkedin page (opens in a new tab)">LinkedIn<i class="fab fa-linkedin"></i></a>
+                        aria-label="Visit my linkedin page (opens in a new tab)">LinkedIn<i
+                            class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
                     <a href="login.html">Login</a>
                 </li>
-                
+
             </ul>
         </nav>
     </header>
@@ -43,8 +44,7 @@
 
         <section class="results1">
             <div class="music-card">
-                <img src="assets/images/Circus.jpeg"
-                alt="album artwork of man standing on an elephant">
+                <img src="assets/images/Circus.jpeg" alt="album artwork of man standing on an elephant">
 
                 <div class="song-info">
                     <h2>Carefree</h2>
@@ -54,8 +54,7 @@
             </div>
 
             <div class="music-card">
-                <img src="assets/images/freddie.jpg"
-                alt="cartoon rabbit holding money bag">
+                <img src="assets/images/freddie.jpg" alt="cartoon rabbit holding money bag">
 
                 <div class="song-info">
                     <h2>Gang Signs(feat ScHool Boy Q)</h2>
@@ -65,8 +64,7 @@
             </div>
 
             <div class="music-card">
-                <img src="assets/images/Energy_(Stay_Far_Away).png"
-                alt="shining star in space">
+                <img src="assets/images/Energy_(Stay_Far_Away).png" alt="shining star in space">
 
                 <div class="song-info">
                     <h2>Energy(Stay Far Away)</h2>
@@ -74,12 +72,11 @@
                     <span class="song-time">3.19</span>
                 </div>
             </div>
-            
+
         </section>
         <section class="results2">
             <div class="music-card">
-                <img src="assets/images/Circus.jpeg"
-                alt="album artwork of man standing on an elephant">
+                <img src="assets/images/Circus.jpeg" alt="album artwork of man standing on an elephant">
 
                 <div class="song-info">
                     <h2>Carefree</h2>
@@ -89,8 +86,7 @@
             </div>
 
             <div class="music-card">
-                <img src="assets/images/freddie.jpg"
-                alt="cartoon rabbit holding money bag">
+                <img src="assets/images/freddie.jpg" alt="cartoon rabbit holding money bag">
 
                 <div class="song-info">
                     <h2>Gang Signs(feat ScHool Boy Q)</h2>
@@ -100,8 +96,7 @@
             </div>
 
             <div class="music-card">
-                <img src="assets/images/Energy_(Stay_Far_Away).png"
-                alt="shining star in space">
+                <img src="assets/images/Energy_(Stay_Far_Away).png" alt="shining star in space">
 
                 <div class="song-info">
                     <h2>Energy(Stay Far Away)</h2>
@@ -109,12 +104,11 @@
                     <span class="song-time">3.19</span>
                 </div>
             </div>
-            
+
         </section>
         <section class="results2">
             <div class="music-card">
-                <img src="assets/images/Circus.jpeg"
-                alt="album artwork of man standing on an elephant">
+                <img src="assets/images/Circus.jpeg" alt="album artwork of man standing on an elephant">
 
                 <div class="song-info">
                     <h2>Carefree</h2>
@@ -124,8 +118,7 @@
             </div>
 
             <div class="music-card">
-                <img src="assets/images/freddie.jpg"
-                alt="cartoon rabbit holding money bag">
+                <img src="assets/images/freddie.jpg" alt="cartoon rabbit holding money bag">
 
                 <div class="song-info">
                     <h2>Gang Signs(feat ScHool Boy Q)</h2>
@@ -135,8 +128,7 @@
             </div>
 
             <div class="music-card">
-                <img src="assets/images/Energy_(Stay_Far_Away).png"
-                alt="shining star in space">
+                <img src="assets/images/Energy_(Stay_Far_Away).png" alt="shining star in space">
 
                 <div class="song-info">
                     <h2>Energy(Stay Far Away)</h2>
@@ -144,12 +136,41 @@
                     <span class="song-time">3.19</span>
                 </div>
             </div>
-            
+
+        </section>
+        <section id="results">
+
         </section>
     </main>
-    
+
+
     <!-- font awesome script -->
-  <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+
+    <script src="js/createMusicCard.js"></script>
+    <script type="text/javascript" src="data/recommendationsSuccess.js"></script>
+
+    <script>
+        // make sure to credit this
+        function millisToMinutesAndSeconds(millis) {
+            var minutes = Math.floor(millis / 60000);
+            var seconds = ((millis % 60000) / 1000).toFixed(0);
+            return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+        }
+        // converts string of data to js object
+        const parsedRecommendationsSuccess = JSON.parse(recommendationsSuccess);
+        console.log(parsedRecommendationsSuccess.tracks[0]);
+        const songTitle = parsedRecommendationsSuccess.tracks[0].name;
+        const artistName = parsedRecommendationsSuccess.tracks[0].artists[0].name;
+        const songDurationMs = parsedRecommendationsSuccess.tracks[0].duration_ms;
+        const songDuration = millisToMinutesAndSeconds(songDurationMs)
+        document.addEventListener("DOMContentLoaded", function (event) {
+            const section = document.getElementById('results');
+            const musicCard = createMusicCard(songTitle, artistName, songDuration,
+                'assets/images/Energy_(Stay_Far_Away).png', 'shining star in space');
+            section.appendChild(musicCard);
+        });
+    </script>
 </body>
 
 </html>
