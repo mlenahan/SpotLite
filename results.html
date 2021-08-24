@@ -156,19 +156,7 @@
         // converts string of data to js object
         const parsedRecommendationsSuccess = JSON.parse(recommendationsSuccess);
 
-        // const parsedTracks = []
-        // for (let i = 0; i < parsedRecommendationsSuccess.tracks.length; i++) {
-        //     const track = parsedRecommendationsSuccess.tracks[i];
-        //     const parsedTrack = parseTrack(track);
-        //     parsedTracks.push(parsedTrack);
-        // }
-        const parsedTracks = parsedRecommendationsSuccess.tracks.map((track) => {
-            return parseTrack(track)
-        })
-
         const parsedTracks = parsedRecommendationsSuccess.tracks.map(parseTrack)
-
-        
 
         document.addEventListener("DOMContentLoaded", function (event) {
             const section = document.getElementById('results');

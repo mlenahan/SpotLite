@@ -12,23 +12,24 @@
 <body>
     <header>
         <nav>
-            
+
             <ul id="menu">
-                
+
                 <li id='site-name'>
                     <a href='results.html'>Song City</a>
                 </li>
 
                 <li>
                     <a href="https://github.com/mlenahan" target="_blank" rel="noopener"
-                    aria-label="Visit my GitHub page (opens in a new tab)">GitHub<i class="fab fa-github"></i></a>
+                        aria-label="Visit my GitHub page (opens in a new tab)">GitHub<i class="fab fa-github"></i></a>
                 </li>
 
                 <li>
                     <a href="https://www.linkedin.com/in/michael-lenahan-84b445135/" target="_blank" rel="noopener"
-                    aria-label="Visit my linkedin page (opens in a new tab)">LinkedIn<i class="fab fa-linkedin"></i></a>
+                        aria-label="Visit my linkedin page (opens in a new tab)">LinkedIn<i
+                            class="fab fa-linkedin"></i></a>
                 </li>
-                
+
                 <li>
                     <a href="login.html">Login</a>
                 </li>
@@ -40,7 +41,7 @@
         <h1>Get New Songs!</h1>
         <h2>Fill in the form below to get suggestions of similar music!</h2>
         <div>
-            <form>
+            <form id="login-form">
                 <div>
                     <label for="artist">Artist</label>
                 </div>
@@ -54,7 +55,7 @@
 
                 <div><label for="genre">Genre</label></div>
                 <div>
-                    <select id="country" name="country">
+                    <select id="genre" name="genre">
                         <option value="techno">Techno</option>
                         <option value="rap">Rap</option>
                         <option value="house">House</option>
@@ -66,7 +67,21 @@
         </div>
     </div>
     <!-- font awesome script -->
-  <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const artistName = form.elements['artistname'].value;
+            const songName = form.elements['songname'].value;
+            const genre = form.elements['genre'].value;
+            console.log(e);
+            console.log(artistName, songName, genre);
+        }
+
+        const form = document.getElementById('login-form');
+        form.onsubmit = handleSubmit;
+    </script>
 </body>
 
 </html>
