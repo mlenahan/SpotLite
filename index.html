@@ -69,14 +69,41 @@
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
     <script>
+        function parseForm(form) {
+            const seed_artists = form.elements['artistname'].value;
+            const seed_tracks = form.elements['songname'].value;
+            const seed_genres = form.elements['genre'].value;
+
+            return {
+                seed_artists,
+                seed_tracks,
+                seed_genres
+            }
+        }
+
         function handleSubmit(e) {
             e.preventDefault();
             const form = e.target;
-            const artistName = form.elements['artistname'].value;
-            const songName = form.elements['songname'].value;
-            const genre = form.elements['genre'].value;
-            console.log(e);
-            console.log(artistName, songName, genre);
+            const formData = parseForm(form);
+            console.log(formData);
+            const recommendationsEndpoint = 'https://api.spotify.com/v1/recommendations'
+            // ?seed_artist=1235&seed_track=156324&genre=345326
+            // seed_artists=skepta&seed_tracks=shutdown&seed_genres=rap
+            const searchParams = new URLSearchParams(formData).toString();
+            console.log(searchParams);
+            const fullUrl = recommendationsEndpoint + '?' + searchParams;
+            console.log(fullUrl)
+
+            // pop smoke - 0eDvMgVFoNV3TpwtrVCoTj
+            // song - 6Juv5N0dNU1imms9c9u1dA
+            const headers = new Headers();
+            const token =
+                'Bearer BQCKD9q4VODBxRHB8H0ZMtYWQpyz7Bfr_VXwL8Y4nBgL4pLaJ6iYcaJTULLa-ux8j5jUby7zSaN1K79V4JrqKyZWeNfzj2M-WsleZJY5goGxVRvhhsvngjMUvpANWvqYSHXwo1ATlpSc6sbRqKRiUCACgSSch40XnDlpsfdWjhoNEG0H6pWuhIhI3bYoeh2LdOcmhUS36nfh5rQw2I9lK8NrXyrAfQK5PG7-TB6JSPaZWAbFXqkyauWD8iiXmNbZMzRlQdv-VTvbHlwtFlU-ke_m7wTl-oGo-uIGjDhNA16SXcA'
+            headers.append('Authorization', token);
+
+            fetch(fullUrl, {
+                headers
+            })
         }
 
         const form = document.getElementById('login-form');
