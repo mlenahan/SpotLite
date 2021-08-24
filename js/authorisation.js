@@ -10,7 +10,7 @@ const TOKEN = "https://accounts.spotify.com/api/token";
 function onPageLoad() {
     client_id = localStorage.getItem("client_id");
     client_secret = localStorage.getItem("client_secret");
-    
+
     if ( window.location.search.length > 0 ){
         handleRedirect();
     }
@@ -84,4 +84,20 @@ function requestAuthorization(){
     url += "&show_dialog=true";
     url += "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position user-library-read streaming user-read-playback-state user-read-recently-played playlist-read-private";
     window.location.href = url; // Show Spotify's authorization screen
+}
+
+function callApi(method, url, body, callback){
+    let xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+    xhr.send(body);
+    xhr.onload = callback;
+}
+
+function removeAllItems( elementId ){
+    let node = document.getElementById(elementId);
+    while (node.firstChild) {
+        node.removeChild(node.firstChild);
+    }
 }
