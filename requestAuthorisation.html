@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            
+            <ul id="menu">
+                
+                <li id='site-name'>
+                    <a href='results.html'>Song City</a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/mlenahan" target="_blank" rel="noopener"
+                    aria-label="Visit my GitHub page (opens in a new tab)">GitHub<i class="fab fa-github"></i></a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/michael-lenahan-84b445135/" target="_blank" rel="noopener"
+                    aria-label="Visit my linkedin page (opens in a new tab)">LinkedIn<i class="fab fa-linkedin"></i></a>
+                </li>
+
+                <li>
+                    <a href="requestAuthorisation.html">Login</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="music-form">
+        <h1>Authorisation</h1>
+        <div class="col">
+            <div class="mb-3">
+                <label for="clientId" class="form-label">Client ID</label>
+                <input type="text" class="form-control" id="clientId" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="clientSecret" class="form-label">Client Secret</label>
+                <input type="text" class="form-control" id="clientSecret" placeholder="">
+            </div>
+            <input class="btn btn-primary btn-lg" type="submit" onclick="requestAuthorization()" value="Request Authorisation"><br/>
+        </div>
+    </div>
+    <!-- font awesome script -->
+  <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
