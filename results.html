@@ -156,23 +156,28 @@
         // converts string of data to js object
         const parsedRecommendationsSuccess = JSON.parse(recommendationsSuccess);
 
-        const parsedTracks = []
-        for (let i = 0; i < parsedRecommendationsSuccess.tracks.length; i++) {
-            const track = parsedRecommendationsSuccess.tracks[i];
-            const parsedTrack = parseTrack(track);
-            parsedTracks.push(parsedTrack);
-        }
-        console.log(parsedTracks)
+        // const parsedTracks = []
+        // for (let i = 0; i < parsedRecommendationsSuccess.tracks.length; i++) {
+        //     const track = parsedRecommendationsSuccess.tracks[i];
+        //     const parsedTrack = parseTrack(track);
+        //     parsedTracks.push(parsedTrack);
+        // }
+        const parsedTracks = parsedRecommendationsSuccess.tracks.map((track) => {
+            return parseTrack(track)
+        })
+
+        const parsedTracks = parsedRecommendationsSuccess.tracks.map(parseTrack)
+
+        
 
         document.addEventListener("DOMContentLoaded", function (event) {
             const section = document.getElementById('results');
-            for (let i = 0; i < parsedTracks.length; i++) {
-                const parsedTrack = parsedTracks[i];
+            parsedTracks.forEach((parsedTrack) => {
                 const musicCard = createMusicCard(parsedTrack.songTitle, parsedTrack.artistName, parsedTrack
                     .songDuration,
                     'assets/images/Energy_(Stay_Far_Away).png', 'shining star in space');
                 section.appendChild(musicCard);
-            }
+            })     
         });
     </script>
 </body>
