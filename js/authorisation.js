@@ -8,6 +8,9 @@ const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
 
 function onPageLoad() {
+    client_id = localStorage.getItem("client_id");
+    client_secret = localStorage.getItem("client_secret");
+    
     if ( window.location.search.length > 0 ){
         handleRedirect();
     }
