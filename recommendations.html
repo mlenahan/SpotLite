@@ -100,9 +100,9 @@
 
             // headers are passed with request. We need authorisation header (token) to authenticate with Spotify
             const headers = new Headers();
-            // will be: const token = window.localStorage.getItem(key);
-            const token = 'Bearer ' + token
-            headers.append('Authorization', token);
+            const token = window.localStorage.getItem(key);
+            const Authorization = 'Bearer ' + token;
+            headers.append('Authorization', Authorization);
             // call the url with headers
             fetch(fullUrl, {
                 headers
