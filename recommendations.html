@@ -47,6 +47,21 @@
     <script src="./js/createRecommendations.js"></script>
     <script src="./js/formSubmitHandler.js"></script>
     <script>
+        function setLoading() {
+            console.log('Load')
+        }
+
+        function handleSuccess() {
+            console.log('Success')
+        }
+
+        function handleUnautorized() {
+            console.log('Unautorized')
+        }
+
+        function handleError() {
+            console.log('Error')
+        }
         // converts string of data to js object
         document.addEventListener("DOMContentLoaded", function (event) {
             const parsedGenreSuccess = JSON.parse(genreSuccess).genres;
@@ -57,7 +72,6 @@
             form.onsubmit = handleRecommendationsFormSubmit;
             root.appendChild(form);
         });
-        
     </script>
 </body>
 

@@ -24,16 +24,14 @@ function handleRecommendationsFormSubmit(e) {
     const searchParams = new URLSearchParams(formData).toString();
     const fullUrl = recommendationsEndpoint + '?' + searchParams;
 
-    // pop smoke - 0eDvMgVFoNV3TpwtrVCoTj
-    // song - 6Juv5N0dNU1imms9c9u1dA
-
     // headers are passed with request. We need authorisation header (token) to authenticate with Spotify
     const headers = new Headers();
     const token = window.localStorage.getItem('access_token');
     const Authorization = 'Bearer ' + token;
     headers.append('Authorization', Authorization);
+
     // call the url with headers
-    fetch(fullUrl, {
+    return fetch(fullUrl, {
         headers
     })
 }
