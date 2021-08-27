@@ -44,7 +44,7 @@ function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUna
                 handleError();
             }
             if (response.status === 200) {
-                handleSuccess();
+                response.json().then(handleSuccess);
             }
         })
     }

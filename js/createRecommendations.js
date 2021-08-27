@@ -86,7 +86,7 @@ function createRecommendations(genres) {
     // Adding divs to form
     const loginForm = document.createElement('form');
     // this form probably doesn't even need a class as not being used in css?
-    loginForm.classList.add('login-form'); 
+    loginForm.setAttribute('id','login-form'); 
     loginForm.appendChild(artistLabelDiv);
     loginForm.appendChild(artistInputDiv);
     loginForm.appendChild(songLabelDiv);

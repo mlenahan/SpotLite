@@ -46,10 +46,14 @@
     <script src="./js/titleCase.js"></script>
     <script src="./js/createRecommendations.js"></script>
     <script src="./js/formSubmitHandler.js"></script>
+    <script src="js/millisToMinutesAndSeconds.js"></script>
+    <script src="js/parseTrack.js"></script>
+    <script src="js/createMusicCard.js"></script>
+    <script src="js/authorization.js"></script>
     <script>
-
+        
         function redirectToLogin() {
-
+            location.href = 'login.html';
         }
 
         function setLoading() {
@@ -59,30 +63,53 @@
             root.innerHTML = loadingSpinner.outerHTML;
         }
 
-        function handleSuccess() {
+        function handleSuccess(data) {
+            console.log(data)
             console.log('Success')
+            // converts string of data to js object
+            const parsedTracks = data.tracks.map(parseTrack)
+            const root = document.getElementById('root');
+            root.innerHTML = '';
+            parsedTracks.forEach((parsedTrack) => {
+                const musicCard = createMusicCard(parsedTrack.songTitle, parsedTrack.artistName, parsedTrack
+                    .songDuration,
+                    'assets/images/Energy_(Stay_Far_Away).png', 'shining star in space');
+                root.appendChild(musicCard);
+            })
         }
 
         function handleUnautorized() {
-            console.log('Unauthorized');
             redirectToLogin();
         }
 
-        function handleError() {
-            console.log('Error')
-        }
-
-        // converts string of data to js object
-        document.addEventListener("DOMContentLoaded", function (event) {
+        function loadPage(error) {
             const parsedGenreSuccess = JSON.parse(genreSuccess).genres;
-            console.log(parsedGenreSuccess)
             const root = document.getElementById('root');
             const form = createRecommendations(parsedGenreSuccess);
 
             // add custom form submit handler
-            form.onsubmit = getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUnautorized, handleError);
-
+            form.onsubmit = getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUnautorized,
+                handleError);
+            if (error) {
+                const errorDiv = document.createElement('div');
+                errorDiv.classList.add('error');
+                errorDiv.innerText = 'Something has gone wrong!';
+                form.appendChild(errorDiv);
+            }
+            root.innerHTML = '';
             root.appendChild(form);
+
+        }
+
+        function handleError() {
+            loadPage(true);
+        }
+
+        // converts string of data to js object
+        document.addEventListener("DOMContentLoaded", function (event) {
+            setLoading();
+            authorize();
+            loadPage();
         });
     </script>
 </body>
