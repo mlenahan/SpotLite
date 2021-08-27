@@ -73,7 +73,7 @@
             parsedTracks.forEach((parsedTrack) => {
                 const musicCard = createMusicCard(parsedTrack.songTitle, parsedTrack.artistName, parsedTrack
                     .songDuration,
-                    'assets/images/Energy_(Stay_Far_Away).png', 'shining star in space');
+                    parsedTrack.url, 'album cover for ' + parsedTrack.songTitle);
                 root.appendChild(musicCard);
             })
         }
