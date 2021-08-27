@@ -1,4 +1,4 @@
-function createForm() {
+function createRecommendations() {
     const newSongsTitleEL = document.createElement('h1');
     newSongsTitleEL.innerText = newSongsTitle;
 
