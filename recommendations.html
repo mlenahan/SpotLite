@@ -47,8 +47,16 @@
     <script src="./js/createRecommendations.js"></script>
     <script src="./js/formSubmitHandler.js"></script>
     <script>
+
+        function redirectToLogin() {
+
+        }
+
         function setLoading() {
-            console.log('Load')
+            const root = document.getElementById('root');
+            const loadingSpinner = document.createElement("div");
+            loadingSpinner.innerText = "Loading...";
+            root.innerHTML = loadingSpinner.outerHTML;
         }
 
         function handleSuccess() {
@@ -56,20 +64,24 @@
         }
 
         function handleUnautorized() {
-            console.log('Unautorized')
+            console.log('Unauthorized');
+            redirectToLogin();
         }
 
         function handleError() {
             console.log('Error')
         }
+
         // converts string of data to js object
         document.addEventListener("DOMContentLoaded", function (event) {
             const parsedGenreSuccess = JSON.parse(genreSuccess).genres;
             console.log(parsedGenreSuccess)
             const root = document.getElementById('root');
             const form = createRecommendations(parsedGenreSuccess);
+
             // add custom form submit handler
-            form.onsubmit = handleRecommendationsFormSubmit;
+            form.onsubmit = getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUnautorized, handleError);
+
             root.appendChild(form);
         });
     </script>
