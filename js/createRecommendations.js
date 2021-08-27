@@ -1,4 +1,11 @@
-function createRecommendations() {
+function createRecommendations(genres) {
+    const newSongsTitle = 'Get New Songs!';
+    const fillForm = 'Fill in the form below to get suggestions of similar music!';
+    const artistLabel = 'Artist';
+    const songLabel = 'Song';
+    const genreLabel = 'Genre';
+    const submitButtonLabel = 'Submit';
+
     const newSongsTitleEL = document.createElement('h1');
     newSongsTitleEL.innerText = newSongsTitle;
 
@@ -42,20 +49,20 @@ function createRecommendations() {
     songInputDiv.appendChild(songInputEl);
 
     // Genre Elements
-    const genreLabelEL = document.createElement('label');
-    genreLabelEL.setAttribute('for', 'genre');
+    const genreLabelEl = document.createElement('label');
+    genreLabelEl.setAttribute('for', 'genre');
     genreLabelEl.innerText = genreLabel;
-
-    const genre = ['Techno', 'Rap', 'House'];
 
     const genreSelectEl = document.createElement('select');
     genreSelectEl.setAttribute('name', 'genre');
     genreSelectEl.setAttribute('id', 'genre');
 
-    for (let i of genre) {
+    console.log(genres);
+    for (let genre of genres) {
+        const label = toTitleCase(genre);
         const genreOption = document.createElement("option");
-        genreOption.value = genre[i];
-        genreOption.text = genre[i];
+        genreOption.value = genre;
+        genreOption.text = label;
         genreSelectEl.appendChild(genreOption);
     }
 
@@ -69,9 +76,9 @@ function createRecommendations() {
     genreSelectDiv.appendChild(genreSelectEl);
 
     // Submit button element
-    const submitButtonEL = document.createElement('submit');
+    const submitButtonEL = document.createElement('button');
     submitButtonEL.setAttribute('type', 'submit');
-    submitButtonEL.setAttribute('value', 'Submit')
+    submitButtonEL.innerText = submitButtonLabel;
 
     const submitButtonDiv = document.createElement('div');
     submitButtonDiv.appendChild(submitButtonEL);
@@ -90,7 +97,9 @@ function createRecommendations() {
 
     const musicForm = document.createElement('div');
     musicForm.classList.add('music-form');
-    musicForm.appendChild.add(newSongsTitleEL);
-    musicForm.appendChild.add(fillFormEl);
-    musicForm.appendChild.add(loginForm);
+    musicForm.appendChild(newSongsTitleEL);
+    musicForm.appendChild(fillFormEl);
+    musicForm.appendChild(loginForm);
+
+    return musicForm
 }
