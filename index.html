@@ -15,15 +15,26 @@
     <div id="root"></div>
 
     <footer>
-        <div>
-            <h3>This is a project made using the Spotify API for educational purposes</h3>
-        </div>
-        <div>
-            <h3>Middle</h3>
-        </div>
-        <div>
-            <a href="https://instagram.com" target="_blank" rel="noopener"
-            aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+        <div class="footer-items-container">
+            <div>
+                This is a project made using the Spotify API for educational purposes
+            </div>
+            <div class="useful-links">
+                <span>USEFUL LINKS</span>
+                <a href="https://developer.spotify.com/">SPOTIFY API</a>
+                <a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recommendation">SPOTIFY API REFERENCE</a>
+                <a href="https://github.com/mlenahan/SpotLite">GITHUB REPO</a>
+            </div>
+            <div class="socials">
+                <a href="https://github.com/mlenahan" target="_blank" rel="noopener"
+                aria-label="Visit my GitHub page (opens in a new tab)"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter-square fa-lg"></i></a>
+                <a href="https://youtube.com" target="_blank" rel="noopener"
+                    aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-youtube-square fa-lg"></i></a>
+            </div>
         </div>
     </footer>
 
@@ -39,7 +50,6 @@
     <script src="js/createMusicCard.js"></script>
     <script src="js/authorization.js"></script>
     <script>
-        
         function redirectToLogin() {
             location.href = 'login.html';
         }
@@ -64,7 +74,7 @@
                 const musicCard = createMusicCard(parsedTrack.songTitle, parsedTrack.artistName, parsedTrack
                     .songDuration,
                     parsedTrack.url, 'album cover for ' + parsedTrack.songTitle, parsedTrack.songLink);
-                musicCardContainer.appendChild(musicCard);   
+                musicCardContainer.appendChild(musicCard);
                 root.appendChild(musicCardContainer);
             })
         }
