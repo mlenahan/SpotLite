@@ -67,14 +67,17 @@
             console.log(data)
             console.log('Success')
             // converts string of data to js object
-            const parsedTracks = data.tracks.map(parseTrack)
+            const parsedTracks = data.tracks.map(parseTrack);
             const root = document.getElementById('root');
+            const musicCardContainer = document.createElement('div');
+            musicCardContainer.classList.add('music-card-container');
             root.innerHTML = '';
             parsedTracks.forEach((parsedTrack) => {
                 const musicCard = createMusicCard(parsedTrack.songTitle, parsedTrack.artistName, parsedTrack
                     .songDuration,
                     parsedTrack.url, 'album cover for ' + parsedTrack.songTitle, parsedTrack.songLink);
-                root.appendChild(musicCard);
+                musicCardContainer.appendChild(musicCard);   
+                root.appendChild(musicCardContainer);
             })
         }
 
