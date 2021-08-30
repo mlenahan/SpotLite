@@ -1,10 +1,10 @@
 function createRecommendations(genres) {
-    const newSongsTitle = 'Get New Songs!';
+    const newSongsTitle = 'SpotLite';
     const fillForm = 'Fill in the form below to get suggestions of similar music!';
     const artistLabel = 'Artist';
     const songLabel = 'Song';
     const genreLabel = 'Genre';
-    const submitButtonLabel = 'Submit';
+    const submitButtonLabel = 'SUBMIT';
 
     const newSongsTitleEL = document.createElement('h1');
     newSongsTitleEL.innerText = newSongsTitle;
@@ -76,8 +76,9 @@ function createRecommendations(genres) {
     genreSelectDiv.appendChild(genreSelectEl);
 
     // Submit button element
-    const submitButtonEL = document.createElement('input');
-    submitButtonEL.setAttribute('type', 'button');
+    const submitButtonEL = document.createElement('button');
+    submitButtonEL.setAttribute('type', 'submit');
+    submitButtonEL.setAttribute('value', 'SUBMIT');
     submitButtonEL.innerText = submitButtonLabel;
 
     const submitButtonDiv = document.createElement('div');
