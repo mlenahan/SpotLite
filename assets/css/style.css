@@ -1,16 +1,16 @@
 :root {
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-    /* https://material.io/design/color/the-color-system.html#color-theme-creation */
-    --primary-main: #01579B;
-    --primary-variant: #0277BD;
-    --secondary-main: #0288D1;
-    --secondary-variant: #039BE5;
-    --surface-main: #4A4A4A;
-    --input-main: #A69F9F;
-    --secondary-text: #ffffff;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+  /* https://material.io/design/color/the-color-system.html#color-theme-creation */
+  --primary-main: #01579B;
+  --primary-variant: #0277BD;
+  --secondary-main: #0288D1;
+  --secondary-variant: #039BE5;
+  --surface-main: #4A4A4A;
+  --input-main: #A69F9F;
+  --secondary-text: #ffffff;
 
 
-    /* Font System */
+  /* Font System */
 
   /* Font face */
   --primary-font: 'Roboto', sans-serif;
@@ -43,9 +43,9 @@
   --font-weight-body: 500;
   --font-letter-spacing-body: 0.5px;
 
-  /* Boldtext */ 
+  /* Boldtext */
   --font-size-boldtext: 16px;
-  --font-weight-boldtext: 700;                  
+  --font-weight-boldtext: 700;
   --font-letter-spacing-boldtext: 0.5px;
 
   /* Small */
@@ -82,8 +82,21 @@ body {
   padding: 0;
   font-family: var(--primary-font);
   min-height: 100vh;
-  }
+}
 
+h1 {
+  color: var(--secondary-text);
+}
+
+h2 {
+  color: var(--secondary-text);
+  font-weight: var(--font-weight-h2);
+}
+
+h3 {
+  color: var(--secondary-main);
+
+}
 
 ul {
   list-style-type: none;
@@ -92,21 +105,21 @@ ul {
   overflow: hidden;
   background-color: var(--primary-main);
 }
-  
+
 li {
   float: right;
 }
-  
+
 li a {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 50px;
-  color:var(--secondary-text);
+  color: var(--secondary-text);
   text-align: center;
   padding: 1em;
   text-decoration: none;
-  }
+}
 
 a:hover {
   text-decoration: underline;
@@ -118,30 +131,19 @@ a:hover {
 }
 
 .music-form {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--surface-main);
-    color:var(--primary-main);
-    width: 50%;
-    margin: auto;
-    margin-top: 2.5%;
-    padding: 1em;
-    border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-main);
+  color: var(--primary-main);
+  width: 50%;
+  margin: auto;
+  margin-top: 2.5%;
+  padding: 1em;
+  border-radius: 1em;
 }
 
-h1 {
-  color: var(--secondary-text);
+.music-form h1, .music-form h2 {
   text-align: center;
-}
-
-h2 {
-  color: var(--secondary-text);
-  font-weight: var(--font-weight-h2);
-  text-align: center;
-}
-
-h3 {
-  color: var(--secondary-main);
 }
 
 .song-time {
@@ -154,7 +156,7 @@ label {
 }
 
 input[type=button] {
-  background-color:var(--primary-main);
+  background-color: var(--primary-main);
   color: var(--secondary-text);
   padding: 1em;
   border: none;
@@ -166,7 +168,7 @@ input[type=button] {
 }
 
 button {
-  background-color:var(--primary-main);
+  background-color: var(--primary-main);
   color: var(--secondary-text);
   padding: 1em;
   border: none;
@@ -177,7 +179,9 @@ button {
   display: block;
 }
 
-input[type=text], input[type=password], select {
+input[type=text],
+input[type=password],
+select {
   width: 100%;
   padding: 1.5em;
   margin: 1em 0;
@@ -208,10 +212,11 @@ input[type=submit]:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
 }
+
 .music-card img {
   object-fit: cover;
-  max-width:100%;
-  max-height:100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .music-card h1 {
@@ -247,7 +252,7 @@ input[type=submit]:hover {
     gap: 3em;
     width: 100%;
   }
-  
+
   .results2 {
     display: flex;
     flex-direction: column;
