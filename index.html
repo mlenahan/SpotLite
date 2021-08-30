@@ -73,7 +73,7 @@
             parsedTracks.forEach((parsedTrack) => {
                 const musicCard = createMusicCard(parsedTrack.songTitle, parsedTrack.artistName, parsedTrack
                     .songDuration,
-                    parsedTrack.url, 'album cover for ' + parsedTrack.songTitle);
+                    parsedTrack.url, 'album cover for ' + parsedTrack.songTitle, parsedTrack.songLink);
                 root.appendChild(musicCard);
             })
         }

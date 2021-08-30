@@ -1,4 +1,5 @@
-function createMusicCard(songTitle, artistName, songDuration, songArtworkSrc, songArtworkAlt) {
+function createMusicCard(songTitle, artistName, songDuration, songArtworkSrc, songArtworkAlt, songLink) {
+    console.log(songLink)
     const songTitleEl = document.createElement('h2');
     songTitleEl.innerText = songTitle;
 
@@ -24,5 +25,11 @@ function createMusicCard(songTitle, artistName, songDuration, songArtworkSrc, so
     musicCard.appendChild(songArtworkEl);
     musicCard.appendChild(songInfo);
 
-    return musicCard;
+    const songLinkEl = document.createElement('a');
+    songLinkEl.setAttribute('href', songLink);
+    songLinkEl.setAttribute('target', '_blank');
+    songLinkEl.setAttribute('rel', 'noopener')
+    songLinkEl.appendChild(musicCard);
+
+    return songLinkEl;
 }
