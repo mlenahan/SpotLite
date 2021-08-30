@@ -76,8 +76,8 @@ function createRecommendations(genres) {
     genreSelectDiv.appendChild(genreSelectEl);
 
     // Submit button element
-    const submitButtonEL = document.createElement('button');
-    submitButtonEL.setAttribute('type', 'submit');
+    const submitButtonEL = document.createElement('input');
+    submitButtonEL.setAttribute('type', 'button');
     submitButtonEL.innerText = submitButtonLabel;
 
     const submitButtonDiv = document.createElement('div');

@@ -5,9 +5,9 @@
     --primary-variant: #0277BD;
     --secondary-main: #0288D1;
     --secondary-variant: #039BE5;
-    --surface-main: #E1F5FE;
+    --surface-main: #4A4A4A;
     --background-main: #ffffff;
-    --secondary-text: #F5FCFF;
+    --secondary-text: #ffffff;
 
 
     /* Font System */
@@ -124,15 +124,18 @@ a:hover {
     color:var(--primary-main);
     width: 50%;
     margin: auto;
+    margin-top: 2.5%;
     padding: 1em;
+    text-align: center;
+    border-radius: 1em;
 }
 
 h1 {
-  color: var(--primary-main);
+  color: var(--secondary-text);
 }
 
 h2 {
-  color: var(--primary-variant);
+  color: var(--secondary-text);
   font-weight: var(--font-weight-h2);
 }
 
@@ -149,7 +152,7 @@ label {
   font-weight: var(--font-weight-subtitle);
 }
 
-input[type=submit] {
+input[type=button] {
   background-color:var(--primary-main);
   color: var(--secondary-text);
   padding: 1em;
@@ -180,7 +183,6 @@ input[type=submit]:hover {
   margin: 3em;
 }
 
-
 .music-card {
   display: flex;
   flex-direction: column;
@@ -194,6 +196,14 @@ input[type=submit]:hover {
   object-fit: cover;
   max-width:100%;
   max-height:100%;
+}
+
+.music-card h1 {
+  color: var(--primary-main);
+}
+
+.music-card h2 {
+  color: var(--primary-variant);
 }
 
 .song-info {
