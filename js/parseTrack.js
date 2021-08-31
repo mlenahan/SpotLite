@@ -1,3 +1,5 @@
+// Returns parsed track information.
+
 function parseTrack(track) {
     console.log(track)
     const album = track.album;

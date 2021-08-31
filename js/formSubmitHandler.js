@@ -26,7 +26,7 @@ function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUna
         const searchParams = new URLSearchParams(formData).toString();
         const fullUrl = recommendationsEndpoint + '?' + searchParams;
 
-        // headers are passed with request. We need authorisation header (token) to authenticate with Spotify
+        // headers are passed with request. We need authorisation header (token) to authenticate with Spotify.
         const headers = new Headers();
         const token = window.localStorage.getItem('access_token');
         const Authorization = 'Bearer ' + token;

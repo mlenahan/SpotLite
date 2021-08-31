@@ -1,3 +1,5 @@
+// Creates music cards
+
 function createMusicCard(songTitle, artistName, songDuration, songArtworkSrc, songArtworkAlt, songLink) {
     console.log(songLink)
     const songTitleEl = document.createElement('h2');

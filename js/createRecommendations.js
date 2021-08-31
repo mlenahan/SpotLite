@@ -1,3 +1,5 @@
+// Creates the form that needs to be filled in order to get recommendations
+
 function createRecommendations(genres) {
     const newSongsTitle = 'SpotLite';
     const fillForm = 'Fill in the form below to get suggestions of similar music!';
