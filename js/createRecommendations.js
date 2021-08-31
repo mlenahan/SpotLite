@@ -2,7 +2,7 @@
 
 function createRecommendations(genres) {
     const newSongsTitle = 'SpotLite';
-    const fillForm = 'Fill in the form below to get suggestions of similar music!';
+    const fillForm = 'Get recommendations.';
     const artistLabel = 'Artist';
     const songLabel = 'Song';
     const genreLabel = 'Genre';
