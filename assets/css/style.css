@@ -11,6 +11,7 @@
   --dark-main: #1d1e1f;
   --dark-secondary: #181818;
   --dark-varient: #282828;
+  --spotify-green: #1DB954;
 
 
   /* Font System */
@@ -102,29 +103,6 @@ h2 {
 h3 {
   color: var(--secondary-main);
 
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: var(--primary-main);
-}
-
-li {
-  float: right;
-}
-
-li a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 50px;
-  color: var(--secondary-text);
-  text-align: center;
-  padding: 1em;
-  text-decoration: none;
 }
 
 a {
@@ -281,7 +259,7 @@ i {
 }
 
 i:hover {
-  color: #1DB954;
+  color: var(--spotify-green);
 }
 
 .useful-links {
@@ -294,7 +272,7 @@ i:hover {
 }
 
 .useful-links a:hover {
-  color: #1DB954;
+  color: var(--spotify-green);
 }
 
 .useful-links span {
@@ -317,5 +295,6 @@ i:hover {
   .footer-items-container {
     display: flex;
     flex-direction: column;
+    gap: 24px;
   }
 }
