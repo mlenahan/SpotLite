@@ -123,7 +123,7 @@ a:hover {
   flex-direction: column;
   background-color: black;
   color: var(--primary-main);
-  width: 50%;
+  width: 30%;
   margin: auto;
   margin-top: 2.5%;
   padding: 1em;
@@ -283,7 +283,7 @@ i:hover {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 680px) {
   .music-card-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -297,5 +297,25 @@ i:hover {
 
   h2 {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 20px;
+  }
+  
+  h2 {
+    font-size: 12px;
   }
 }
