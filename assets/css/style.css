@@ -225,7 +225,7 @@ input[type=submit]:hover {
 /* Footer */
 
 footer {
-  text-align: center;
+  /* text-align: center; */
   padding: 2em;
   background-color: black;
   margin-top: auto;
@@ -262,6 +262,8 @@ i:hover {
 .useful-links {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  margin: auto;
 }
 
 .useful-links a {
