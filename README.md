@@ -53,7 +53,7 @@ Here I will highlight the main features I have included in SpotLite.
 
 - __Music Cards__
     
-    ![image](readme-screenshots/musiccards.png)
+    ![image](readme-screenshots/musiccards.jpg)
 
     - Once you have filled in the recommendations form, you will be given your recommendations results. Here you will see each song displayed in its own card.
 

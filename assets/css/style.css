@@ -153,6 +153,7 @@ input[type=button] {
   letter-spacing: .25em;
   margin: 0 auto;
   display: block;
+  -webkit-appearance: none;
 }
 
 button {
@@ -165,6 +166,7 @@ button {
   letter-spacing: .25em;
   margin: 0 auto;
   display: block;
+  -webkit-appearance: none;
 }
 
 input[type=text],
@@ -302,6 +304,7 @@ i:hover {
   }
   .music-form {
     width: 70%;
+    margin-bottom: 10%;
   }
 }
 
@@ -316,6 +319,7 @@ i:hover {
 
   .music-form {
     width: 70%;
+    margin-bottom: 10%;
   }
 }
 
@@ -326,5 +330,10 @@ i:hover {
   
   h2 {
     font-size: 12px;
+  }
+
+  .music-form {
+    width: 70%;
+    margin-bottom: 10%;
   }
 }
