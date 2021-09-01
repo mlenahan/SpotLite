@@ -91,7 +91,7 @@
             const form = createRecommendationsForm(parsedGenreSuccess);
 
             // add custom form submit handler
-            form.onsubmit = getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUnautorized,
+            form.onsubmit = getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUnauthorized,
                 handleError);
             if (error) {
                 const errorDiv = document.createElement('div');
