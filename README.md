@@ -110,7 +110,7 @@ Here I will highlight the main features I have included in SpotLite.
 
 ### Fixed Bugs
 
-- I had an issue with my footer not sticking to the bottom of the page. In order to fix this I researched the issue. The resolution to this issue was to use ```bottom: 0;```.
+- I had an issue with my genre select part of the recommendations form. In order to fix this I researched the issue. The resolution to this issue was to use ```-webkit-appearance: none;```.
 
 ## Deployment
 
@@ -119,26 +119,21 @@ Here I will highlight the main features I have included in SpotLite.
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-  The live link can be found here - https://mlenahan.github.io/rare-food/index.html
+  The live link can be found here - https://mlenahan.github.io/spotlite/
 
-- To avoid potential plagiarism of my code, If someone wishes to clone the repo, they can do so by using this command in their terminal/command line ```git clone https://github.com/mlenahan/rare-food.git```
+- To avoid potential plagiarism of my code, If someone wishes to clone the repo, they can do so by using this command in their terminal/command line ```git clone https://github.com/mlenahan/spotlite.git```
 - If the user is using GitPod, they can clone the code using the GitPod button that would appear above the code.
 
 ### Credits
 
-- The content of my recipes was taken from [BBC Good Food](https://www.bbcgoodfood.com/)
-- The inspiration for my design and layout was taken from [Medium](https://medium.com/)
-- I learned how to use and implement CSS variables through tutorials created by [Kevin Powell](https://www.youtube.com/kepowob)
-- I learned how to use Figma through tutorials created by [Figma](https://www.youtube.com/channel/UCQsVmhSa4X-G3lHlUtejzLA)
+- The inspiration for my design and layout was taken from [Spotify](https://www.https://www.spotify.com/)
+- I used the Spotify API to get the data used [Spotify API](https://www.https://www.developer.spotify.com/)
+- I learned a lot about using the Spotify API through a tutorial created by [Maker At Play Coding](https://www.youtube.com/channel/UCUCydzw0QXIrNXi9NYUXgQA)
+- Some of my code is taken from this tutorial by [Maker At Play Coding](https://www.youtube.com/watch?v=1vR3m0HupGI&ab_channel=MakerAtPlayCoding)
 
 ### Media
 
 - These are links to all media used throughout the website
 
-    - [About](https://images.immediate.co.uk/production/volatile/sites/30/2021/06/About_GF_v3-408d02b.jpg?quality=90&lb=620,413&background=white)
-    - [Pizza Baked Potato](https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.seasaltwithfood.com%2F2012%2F01%2Fbaked-potato-skins-pepperoni-pizza.html&psig=AOvVaw16Kenk2rwvTzAvjJyAKYzS&ust=1628347980267000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKiu_IzTnPICFQAAAAAdAAAAABAE)
-    - [Slow Cooker Beef Barbacoa](https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/02/Barbacoa-Tacos-3.jpg)
-    - [Bourbon, Black Cherry & Bacon Brownies](https://unsplash.com/photos/5z1a_EsYs40)
-    - [Mezcal Margarita](https://unsplash.com/photos/uE-BD8_Cx18)
-    - [Rare Food Icon](https://hatchful.shopify.com/)
+    - All album artwork used is generated using the [Spotify API](https://www.https://www.developer.spotify.com/)
     - [Icons](https://fontawesome.com/)
