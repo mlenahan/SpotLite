@@ -178,6 +178,7 @@ select {
   display: inline-block;
   box-sizing: border-box;
   background-color: var(--surface-main);
+  -webkit-appearance: none;
 }
 
 input[type=submit]:hover {
