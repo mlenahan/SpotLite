@@ -63,25 +63,13 @@ Here I will highlight the main features I have included in SpotLite.
     
     ![image](readme-screenshots/footer.png)
 
-    - The footer section includes links to the relevant social media sites for Rare Food. The links will open to a new tab to allow easy navigation for the user. It also includes a link to my GitHub profile.
+    - The footer section includes useful links to the relevant information about SpotLite and social media sites for SpotLite. The links will open to a new tab to allow easy navigation for the user. It also includes a link to my GitHub profile.
     - The footer is valuable to the user as it encourages them to keep connected via social media.
 
 
 ### Features Left To Implement
 
-- __Account System__
 
-    - In order to implement some features I've considered for the future, I would need to add an account system and username and password validation. This would include a profile page that will show their saved recipes. To do this I would need to use a database.
-
-- __Functioning Save Button__
-    
-    ![image](readme-screenshots/button.png)
-
-    - I have included a save button feature on my recipe pages for styling purposes. The button is fully responsive but doesn't actual function. In the future, with the use of some JavaScript and JSON, I would love to add in a database system which will allow the user to save their favourite recipes to their verified profile page.
-
-- __Recipe Posting Function__
-
-    - If an account system is implemented, this could allow for users to post their own recipes in a form and share them with the rest of the websites community.
 
 ## Testing
 
@@ -90,9 +78,7 @@ Here I will highlight the main features I have included in SpotLite.
   
   ![image](readme-screenshots/index-validation-html.png)
 
-  ![image](readme-screenshots/recipe-validation-html.png)
-
-  ![image](readme-screenshots/about-validation-html.png)
+  ![image](readme-screenshots/login-validation-html.png)
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
