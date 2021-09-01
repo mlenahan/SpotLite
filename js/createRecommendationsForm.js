@@ -32,7 +32,7 @@ function createRecommendationsForm(genres) {
 
     // Song Elements
     const songLabelEl = document.createElement('label');
-    songLabelEl.setAttribute('for', 'song')
+    songLabelEl.setAttribute('for', 'song');
     songLabelEl.innerText = songLabel;
 
     const songInputEl = document.createElement('input');
@@ -102,5 +102,5 @@ function createRecommendationsForm(genres) {
     musicForm.appendChild(fillFormEl);
     musicForm.appendChild(loginForm);
 
-    return musicForm
+    return musicForm;
 }

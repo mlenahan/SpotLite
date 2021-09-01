@@ -1,7 +1,6 @@
-// var REDIRECT_URI = "https://8000-azure-firefly-qwnrsc9s.ws-eu16.gitpod.io/index.html";
-var REDIRECT_URI = "https://mlenahan.github.io/spotlite/index.html";
+// const REDIRECT_URI = "https://8000-azure-firefly-qwnrsc9s.ws-eu16.gitpod.io/index.html";
+const REDIRECT_URI = "https://mlenahan.github.io/spotlite/index.html";
  
-
 const CLIENT_ID = "c88f76e40dab4687994225268147612c";
 const CLIENT_SECRET = "a634c74cd99a4b1a9f8e567bbd8a7c80";
 
@@ -13,9 +12,9 @@ function authorize() {
     const code = getCodeFromSearchParams();
     if (code) {
         handleRedirect(code);
-        return true
+        return true;
     }
-    return false
+    return false;
 }
 
 function getCodeFromSearchParams() {

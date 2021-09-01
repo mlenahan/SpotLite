@@ -8,7 +8,7 @@ function parseForm(form) {
         seed_artists,
         seed_tracks,
         seed_genres
-    }
+    };
 }
 
 function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUnauthorized, handleError) {
@@ -20,7 +20,7 @@ function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUna
         const form = e.target;
         const formData = parseForm(form);
 
-        const recommendationsEndpoint = 'https://api.spotify.com/v1/recommendations'
+        const recommendationsEndpoint = 'https://api.spotify.com/v1/recommendations';
         // convert form data to query string parameters, e.g. 
         // seed_artists=skepta&seed_tracks=shutdown&seed_genres=rap
         const searchParams = new URLSearchParams(formData).toString();
@@ -46,7 +46,7 @@ function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUna
             if (response.status === 200) {
                 response.json().then(handleSuccess);
             }
-        })
+        });
     }
 
     return handleRecommendationsFormSubmit;
