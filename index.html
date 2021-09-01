@@ -43,7 +43,7 @@
     <!-- My scripts -->
     <script type="text/javascript" src="data/genreSuccess.js"></script>
     <script src="./js/titleCase.js"></script>
-    <script src="./js/createRecommendations.js"></script>
+    <script src="./js/createRecommendationsForm.js"></script>
     <script src="./js/formSubmitHandler.js"></script>
     <script src="js/millisToMinutesAndSeconds.js"></script>
     <script src="js/parseTrack.js"></script>
@@ -55,14 +55,16 @@
         }
 
         function setLoading() {
+            /* Replaces page with loading director while API sends requests */
             const root = document.getElementById('root');
             const loadingSpinner = document.createElement("div");
             loadingSpinner.innerText = "Loading...";
             root.innerHTML = loadingSpinner.outerHTML;
         }
-
+        
         function handleSuccess(data) {
-            console.log(data)
+            /* This function is called when Spotify API returns recommendations response. 
+            It then parses the response and converts it into DOM elements and appends them to the DOM */
             console.log('Success')
             // converts string of data to js object
             const parsedTracks = data.tracks.map(parseTrack);
@@ -78,15 +80,15 @@
                 root.appendChild(musicCardContainer);
             })
         }
-        // typo
-        function handleUnautorized() {
+        
+        function handleUnauthorized() {
             redirectToLogin();
         }
 
         function loadPage(error) {
             const parsedGenreSuccess = JSON.parse(genreSuccess).genres;
             const root = document.getElementById('root');
-            const form = createRecommendations(parsedGenreSuccess);
+            const form = createRecommendationsForm(parsedGenreSuccess);
 
             // add custom form submit handler
             form.onsubmit = getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUnautorized,
