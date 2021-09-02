@@ -8,9 +8,8 @@ function requestAuthorization() {
 
     let url = AUTHORIZE_ENDPOINT;
     url += "?client_id=" + CLIENT_ID;
-    url += "&response_type=code";
+    url += "&response_type=token";
+    url += "&scope=user-read-email,user-read-private";
     url += "&redirect_uri=" + encodeURI(REDIRECT_URI);
-    url += "&show_dialog=true";
-    url += "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position user-library-read streaming user-read-playback-state user-read-recently-played playlist-read-private";
     window.location.href = url; // Show Spotify's authorization screen
 }

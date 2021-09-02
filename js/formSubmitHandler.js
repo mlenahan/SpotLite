@@ -1,11 +1,11 @@
-const RECOMMENDATIONS_ENDPOINT = 'https://api.spotify.com/v1/recommendations';
-const SEARCH_ENDPOINT = 'https://api.spotify.com/v1/search';
+const RECOMMENDATIONS_ENDPOINT = "https://api.spotify.com/v1/recommendations";
+const SEARCH_ENDPOINT = "https://api.spotify.com/v1/search";
 
 function parseForm(form) {
     /* Gets values from form and renames for querystring parameters */
-    const artist = form.elements['artistname'].value;
-    const songName = form.elements['songname'].value;
-    const seed_genres = form.elements['genre'].value;
+    const artist = form.elements["artistname"].value;
+    const songName = form.elements["songname"].value;
+    const seed_genres = form.elements["genre"].value;
 
     return {
         artist,
@@ -14,6 +14,7 @@ function parseForm(form) {
     };
 }
 
+// eslint-disable-next-line no-unused-vars
 function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUnauthorized, handleError) {
 
     async function handleRecommendationsFormSubmit(e) {
@@ -25,9 +26,9 @@ function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUna
 
         // headers are passed with request. We need authorisation header (token) to authenticate with Spotify.
         const headers = new Headers();
-        const token = window.localStorage.getItem('access_token');
-        const Authorization = 'Bearer ' + token;
-        headers.append('Authorization', Authorization);
+        const token = window.localStorage.getItem("access_token");
+        const Authorization = "Bearer " + token;
+        headers.append("Authorization", Authorization);
 
         // call the url with headers
         setLoading();
@@ -37,7 +38,7 @@ function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUna
              * If request is successful return ID of first artist. Otherwise handle errors. */
             const artistRequestOptions = { q: artistSearchQuery, type: "artist", limit: 1 };
             const artistSearchParams = new URLSearchParams(artistRequestOptions).toString();
-            const artistRequestFullUrl = SEARCH_ENDPOINT + '?' + artistSearchParams;
+            const artistRequestFullUrl = SEARCH_ENDPOINT + "?" + artistSearchParams;
 
             const response = await fetch(artistRequestFullUrl, { headers });
             if (response.status === 401) handleUnauthorized();
@@ -51,9 +52,9 @@ function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUna
              * If request is successful return ID of first track. Otherwise handle errors. */
             const trackRequestOptions = { q: trackSearchQuery, type: "track", limit: 1 };
             const trackSearchParams = new URLSearchParams(trackRequestOptions).toString();
-            const trackRequestFullUrl = SEARCH_ENDPOINT + '?' + trackSearchParams;
+            const trackRequestFullUrl = SEARCH_ENDPOINT + "?" + trackSearchParams;
 
-            const response = await fetch(trackRequestFullUrl, { headers })
+            const response = await fetch(trackRequestFullUrl, { headers });
             if (response.status === 401) handleUnauthorized();
             if (response.status === 400) handleError();
             const data = await response.json();
@@ -65,14 +66,14 @@ function getHandleRecommendationsFormSubmit(setLoading, handleSuccess, handleUna
         const trackId = await getTrackIdFromSearch(songName);
 
         // Pass artistId, trackId, and genre to recommendations endpoint to get recommendations and pass returned data to handleSuccess
-        const recommendationsData = { seed_artists: artistId, seed_tracks: trackId, seed_genres }
+        const recommendationsData = { seed_artists: artistId, seed_tracks: trackId, seed_genres };
         const searchParams = new URLSearchParams(recommendationsData).toString();
-        const recommendationsFullUrl = RECOMMENDATIONS_ENDPOINT + '?' + searchParams;
+        const recommendationsFullUrl = RECOMMENDATIONS_ENDPOINT + "?" + searchParams;
         fetch(recommendationsFullUrl, { headers }).then((response) => {
             if (response.status === 401) handleUnauthorized();
             if (response.status === 400) handleError();
             if (response.status === 200) response.json().then(handleSuccess);
-        })
+        });
     }
 
     return handleRecommendationsFormSubmit;
