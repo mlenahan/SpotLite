@@ -3,9 +3,9 @@ const SEARCH_ENDPOINT = "https://api.spotify.com/v1/search";
 
 function parseForm(form) {
     /* Gets values from form and renames for querystring parameters */
-    const artist = form.elements["artistname"].value;
-    const songName = form.elements["songname"].value;
-    const seed_genres = form.elements["genre"].value;
+    const artist = form.elements.artistname.value;
+    const songName = form.elements.songname.value;
+    const seed_genres = form.elements.genre.value;
 
     return {
         artist,

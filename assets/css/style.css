@@ -194,7 +194,8 @@ input[type=submit]:hover {
 .music-card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
+  gap: 32px;
+  padding-bottom: 32px;
   width: 90%;
   margin: auto;
 }
