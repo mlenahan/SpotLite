@@ -208,6 +208,11 @@ input[type=submit]:hover {
   background-color: var(--dark-secondary);
 }
 
+.music-card-header > h1 {
+  padding-left: 5%;
+  color: var(--primary-main);
+}
+
 .music-card:hover {
   background: var(--dark-varient);
 }

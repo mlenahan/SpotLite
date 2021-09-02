@@ -1,4 +1,5 @@
 function createMusicCard(songTitle, artistName, songDuration, songArtworkSrc, songArtworkAlt, songLink) {
+
     const songTitleEl = document.createElement('h2');
     songTitleEl.innerText = songTitle;
 

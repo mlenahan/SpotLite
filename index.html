@@ -19,21 +19,26 @@
             </div>
             <div class="useful-links">
                 <span>USEFUL LINKS</span>
-                <a href="https://developer.spotify.com/" target="_blank" rel="noopener" aria-label="Visit the Spotify API page (opens in a new tab)">Spotify API</a>
-                <a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recommendation" 
-                target="_blank" rel="noopener" aria-label="Visit the Spotify API reference page (opens in a new tab)">Spotify API reference</a>
-                <a href="https://github.com/mlenahan/SpotLite" target="_blank" rel="noopener" 
-                aria-label="Visit the GitHub repo for this project (opens in a new tab)">GitHub repo</a>
+                <a href="https://developer.spotify.com/" target="_blank" rel="noopener"
+                    aria-label="Visit the Spotify API page (opens in a new tab)">Spotify API</a>
+                <a href="https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recommendation"
+                    target="_blank" rel="noopener"
+                    aria-label="Visit the Spotify API reference page (opens in a new tab)">Spotify API reference</a>
+                <a href="https://github.com/mlenahan/SpotLite" target="_blank" rel="noopener"
+                    aria-label="Visit the GitHub repo for this project (opens in a new tab)">GitHub repo</a>
             </div>
             <div class="socials">
                 <a href="https://github.com/mlenahan" target="_blank" rel="noopener"
-                aria-label="Visit my GitHub page (opens in a new tab)"><i class="fab fa-github"></i></a>
+                    aria-label="Visit my GitHub page (opens in a new tab)"><i class="fab fa-github"></i></a>
                 <a href="https://instagram.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram fa-lg"></i></a>
+                    aria-label="Visit our Instagram page (opens in a new tab)"><i
+                        class="fab fa-instagram fa-lg"></i></a>
                 <a href="https://twitter.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter-square fa-lg"></i></a>
+                    aria-label="Visit our Twitter page (opens in a new tab)"><i
+                        class="fab fa-twitter-square fa-lg"></i></a>
                 <a href="https://youtube.com" target="_blank" rel="noopener"
-                    aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-youtube-square fa-lg"></i></a>
+                    aria-label="Visit our YouTube page (opens in a new tab)"><i
+                        class="fab fa-youtube-square fa-lg"></i></a>
             </div>
         </div>
     </footer>
@@ -61,7 +66,7 @@
             loadingSpinner.innerText = "Loading...";
             root.innerHTML = loadingSpinner.outerHTML;
         }
-        
+
         function handleSuccess(data) {
             /* This function is called when Spotify API returns recommendations response. 
             It then parses the response and converts it into DOM elements and appends them to the DOM */
@@ -69,6 +74,15 @@
             // converts string of data to js object
             const parsedTracks = data.tracks.map(parseTrack);
             const root = document.getElementById('root');
+            const recommendationsHeader = 'Your recommendations.';
+
+            const recommendationsHeaderEl = document.createElement('h1');
+            recommendationsHeaderEl.innerText = recommendationsHeader;
+
+            const musicCardHeader = document.createElement('div');
+            musicCardHeader.classList.add('music-card-header');
+            musicCardHeader.appendChild(recommendationsHeaderEl);
+
             const musicCardContainer = document.createElement('div');
             musicCardContainer.classList.add('music-card-container');
             root.innerHTML = '';
@@ -77,10 +91,11 @@
                     .songDuration,
                     parsedTrack.url, 'album cover for ' + parsedTrack.songTitle, parsedTrack.songLink);
                 musicCardContainer.appendChild(musicCard);
+                root.appendChild(musicCardHeader);
                 root.appendChild(musicCardContainer);
             })
         }
-        
+
         function handleUnauthorized() {
             redirectToLogin();
         }

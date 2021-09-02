@@ -130,6 +130,7 @@ Here I will highlight the main features I have included in SpotLite.
 - I used the Spotify API to get the data used [Spotify API](https://www.https://www.developer.spotify.com/)
 - I learned a lot about using the Spotify API through a tutorial created by [Maker At Play Coding](https://www.youtube.com/channel/UCUCydzw0QXIrNXi9NYUXgQA)
 - Some of my code is taken from this tutorial by [Maker At Play Coding](https://www.youtube.com/watch?v=1vR3m0HupGI&ab_channel=MakerAtPlayCoding)
+- I used two functions in my code that I took from stackoverflow. [millisToMinutesAndSeconds](https://stackoverflow.com/questions/21294302/converting-milliseconds-to-minutes-and-seconds-with-javascript) and [titleCase](https://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript).
 
 ### Media
 
