@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 const recommendationsSuccess = `{ 
     "tracks": [
       {
@@ -78,5 +79,5 @@ const recommendationsSuccess = `{
         "type": "track"
       }
     ]
-  }`
+  }`;
   

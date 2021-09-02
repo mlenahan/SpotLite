@@ -1,0 +1,23 @@
+{
+  "name": "music-assistant",
+  "version": "1.0.0",
+  "description": "When deciding on what to do for this project, I knew I wanted to create something that had a real world use. Having worked with APIs in python, I thought it would be a good idea to try to do the same with JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlenahan/music-assistant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlenahan/music-assistant/issues"
+  },
+  "homepage": "https://github.com/mlenahan/music-assistant#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}

@@ -3,6 +3,7 @@ const REDIRECT_URI = "https://8000-azure-firefly-qwnrsc9s.ws-eu16.gitpod.io/inde
 const CLIENT_ID = "c88f76e40dab4687994225268147612c";
 const AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 
+// eslint-disable-next-line no-unused-vars
 function requestAuthorization() {
 
     let url = AUTHORIZE_ENDPOINT;
