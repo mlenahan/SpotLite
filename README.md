@@ -8,17 +8,6 @@ You must have a premium Spotify account to use this site.
 
 My site is designed around the principals of [Material Design](https://material.io/design). 
 
-### Index page 
-![image](readme-screenshots/index-am-i-responsive.png) 
-
-### Recipe Page
-![image](readme-screenshots/recipe-am-i-responsive.png)
-
-### About Page
-![image](readme-screenshots/about-am-i-responsive.png)
-
-## Planning
-
 - __Figma__
 
     - I created the design for the project using [Figma](https://www.figma.com/). This was a good oppertunity to develop the skills I had learned using Figma for the first time on my last project.
@@ -89,18 +78,29 @@ Here I will highlight the main features I have included in SpotLite.
   
   ![image](readme-screenshots/variable-warnings.png)
 
+- JavaScript
+    - To lint my JavaScript files I installed ESLint to my VS Code.
+    - To install ESLint, type ```npm install eslint``` in the terminal.
+    - I then set up a configureation file by typing ```npm init``` in the terminal to create a ```package.json``` file.
+    - I then configured my file by typing ```eslint --init``` in the terminal which creates a ```.eslintrc.{js,yml,json}``` file.
+    - To use ESLint you simply type ```eslint``` in the terminal. My file has no errors.
+
+    ![image](readme-screenshots/eslint.png)
+
 - Responsiveness
-    - I have tested the responsiveness of my website on multiple browsers and devices. For desktop and laptop, I tested the webiste on Chrome and Safari.
+    - I have tested the responsiveness of my website on multiple browsers and devices including Chrome, Safari, Firefox, MacBook, iPad and iPhone.
+    
+    ### Form Page 
+![image](readme-screenshots/index-am-i-responsive.png) 
 
-    ![image](readme-screenshots/chrome.png)
+### Log In Page
+![image](readme-screenshots/recipe-am-i-responsive.png)
 
-    ![image](readme-screenshots/safari.png)
+### Recommendations Page
+![image](readme-screenshots/about-am-i-responsive.png)
 
-    - I have tested the responsiveness on iPhone and iPad also.
+## Planning
 
-    ![image](readme-screenshots/ipad.jpg)
-
-    ![image](readme-screenshots/iphone.png)
 
     - There are no know issues with responsiveness across all devices and browsers I have tested.
 

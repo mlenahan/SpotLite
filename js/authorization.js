@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
-const REDIRECT_URI = "https://8000-azure-firefly-qwnrsc9s.ws-eu16.gitpod.io/index.html";
-// const REDIRECT_URI = "https://mlenahan.github.io/spotlite/index.html";
+// const REDIRECT_URI = "https://8000-azure-firefly-qwnrsc9s.ws-eu16.gitpod.io/index.html";
+const REDIRECT_URI = "https://mlenahan.github.io/spotlite/";
  
 const CLIENT_ID = "c88f76e40dab4687994225268147612c";
 
