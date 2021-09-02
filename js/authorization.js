@@ -2,56 +2,27 @@ const REDIRECT_URI = "https://8000-azure-firefly-qwnrsc9s.ws-eu16.gitpod.io/inde
 // const REDIRECT_URI = "https://mlenahan.github.io/spotlite/index.html";
  
 const CLIENT_ID = "c88f76e40dab4687994225268147612c";
-const CLIENT_SECRET = "a634c74cd99a4b1a9f8e567bbd8a7c80";
 
 const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
 
-// eslint-disable-next-line no-unused-vars
 function authorize() {
     /* This function is called when the page loads. We check if this is a redirect from Spotify.
-     * If it is, we fire the handleRedirect function */
-    const code = getCodeFromSearchParams();
-    if (code) {
-        handleRedirect(code);
-        return true;
+     * If it is, we access the hash fragment to get access token */
+    const accessToken = getAccessTokenFormHashFragment();
+    if(accessToken) {
+      localStorage.setItem("access_token", access_token);
+      return true;
     }
     return false;
 }
 
-function getCodeFromSearchParams() {
+function getAccessTokenFormHashFragment() {
     /* Get code from querystring parameter returned by Spotify.
      * Will return null if querystring parameter is not present */
-    const urlParams = new URLSearchParams(window.location.search);
-    // eslint-disable-next-line no-undef
-    return code = urlParams.get("code");
-}
-
-function createRequestBody(code) {
-    /* Generate body to be sent with Authorization request */
-    let body = "grant_type=authorization_code";
-    body += "&code=" + code;
-    body += "&redirect_uri=" + encodeURI(REDIRECT_URI);
-    body += "&client_id=" + CLIENT_ID;
-    body += "&client_secret=" + CLIENT_SECRET;
-    return body;
-}
-
-
-function handleRedirect(code) {
-    const method = "POST";
-    const body = createRequestBody(code);
-    const headers = new Headers();
-    headers.append("Authorization", "Basic " + btoa(CLIENT_ID + ":" + CLIENT_SECRET));
-    headers.append("Content-Type", "application/x-www-form-urlencoded");
-    fetch(TOKEN_ENDPOINT, { method, headers, body }).then(handleSuccessResponse);
-}
-
-function handleSuccessResponse(response) {
-    response.json().then(handleJson);
-}
-
-function handleJson(data){
-    const { access_token, refresh_token } = data;
-    localStorage.setItem("access_token", access_token);
-    localStorage.setItem("refresh_token", refresh_token);
+    if(window.location.hash) {
+      var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+      const hashParams = new URLSearchParams(hash);
+      const access_token = hashParams.get("access_token");
+      localStorage.setItem("access_token", access_token);
+    }
 }
