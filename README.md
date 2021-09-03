@@ -4,9 +4,27 @@ When deciding on what to do for this project, I knew I wanted to create somethin
 
 Spotify is something many of us use daily so I thought working with the Spotify API would be a really fun challenge and relevent to a lot of people. I decided to create a site that takes in an artist name, song name and a genre and gives you back song recommendations based on the information you have provided.
 
-You must have a premium Spotify account to use this site.
+# Important information regarding this project
 
-My site is designed around the principals of [Material Design](https://material.io/design). 
+Spotify places particular restrictions on apps created using their API. This app is in development mode which means it is restricted to a maximum of 25 users explicitly assigned by the creator.
+
+![image](readme-screenshots/dev-mode-spotify.png)
+
+![image](readme-screenshots/dev-mode-explanation.png)
+
+As this is a personal project developed for educational purposes, I can not get access to a quota extension.
+
+![image](readme-screenshots/quota-grant.png)
+
+If you wish to gain access to the use of this app, please contact me at michael_lenahan@hotmail.com or on +353870575848. I will add you to the users list as soon as possible.
+
+Here is a video recording of the app in use if you do not wish to gain access but want to see it in action.
+
+[YouTube link to video](https://www.youtube.com/watch?v=TGS48JcPmIc&ab_channel=MichaelLenahan)
+
+My site is designed around the principals of [Material Design](https://material.io/design).
+
+## Planning
 
 - __Figma__
 
@@ -58,7 +76,7 @@ Here I will highlight the main features I have included in SpotLite.
 
 ### Features Left To Implement
 
-
+In the future, I plan to add a feature that allows the user to add the link of a particular song to the form and will give back recommendations based on the link they provide.
 
 ## Testing
 
@@ -90,19 +108,16 @@ Here I will highlight the main features I have included in SpotLite.
 - Responsiveness
     - I have tested the responsiveness of my website on multiple browsers and devices including Chrome, Safari, Firefox, MacBook, iPad and iPhone.
     
-    ### Form Page 
+### Form Page 
 ![image](readme-screenshots/index-am-i-responsive.png) 
 
-### Log In Page
-![image](readme-screenshots/recipe-am-i-responsive.png)
+### iPhone
+![image](readme-screenshots/iphone.jpg)
 
 ### Recommendations Page
 ![image](readme-screenshots/about-am-i-responsive.png)
 
-## Planning
-
-
-    - There are no know issues with responsiveness across all devices and browsers I have tested.
+- There are no know issues with responsiveness across all devices and browsers I have tested.
 
 ### Unfixed Bugs
 
