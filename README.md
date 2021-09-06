@@ -108,7 +108,7 @@ Here I will highlight the main features I have included in SpotLite.
     ![image](readme-screenshots/eslint.png)
 
 - Responsiveness
-    - I have tested the responsiveness of my website on multiple browsers and devices including Chrome, Safari, Firefox, MacBook, iPad and iPhone.
+    - I have tested the responsiveness of my website on multiple browsers and devices.
     
 ### Form Page 
 ![image](readme-screenshots/am-i-responsive.png) 
@@ -125,7 +125,7 @@ Here I will highlight the main features I have included in SpotLite.
 
 
 ### Recommendations Page Desktop
-![image](readme-screenshots/desktop-recommendations.png)
+![image](readme-screenshots/desktop-recommendations.jpg)
 
 - There are no know issues with responsiveness across all devices and browsers I have tested.
 
