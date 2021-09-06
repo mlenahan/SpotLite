@@ -76,7 +76,9 @@ Here I will highlight the main features I have included in SpotLite.
 
 ### Features Left To Implement
 
-In the future, I plan to add a feature that allows the user to add the link of a particular song to the form and will give back recommendations based on the link they provide.
+   - In the future, I plan to add a feature that allows the user to add the link of a particular song to the form and will give back recommendations based on the link they provide.
+
+   - I also plan to add a feature that allows the user to create a playlist based on the recommendations they have received.
 
 ## Testing
 
@@ -109,13 +111,21 @@ In the future, I plan to add a feature that allows the user to add the link of a
     - I have tested the responsiveness of my website on multiple browsers and devices including Chrome, Safari, Firefox, MacBook, iPad and iPhone.
     
 ### Form Page 
-![image](readme-screenshots/index-am-i-responsive.png) 
+![image](readme-screenshots/am-i-responsive.png) 
 
 ### iPhone
+![image](readme-screenshots/iphone2.jpg)
+
 ![image](readme-screenshots/iphone.jpg)
 
-### Recommendations Page
-![image](readme-screenshots/about-am-i-responsive.png)
+### iPad
+![image](readme-screenshots/ipad1.png)
+
+![image](readme-screenshots/ipad2.png)
+
+
+### Recommendations Page Desktop
+![image](readme-screenshots/desktop-recommendations.png)
 
 - There are no know issues with responsiveness across all devices and browsers I have tested.
 
