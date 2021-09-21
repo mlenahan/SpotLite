@@ -75,13 +75,23 @@
             const parsedTracks = data.tracks.map(parseTrack);
             const root = document.getElementById('root');
             const recommendationsHeader = 'Your recommendations';
+            const tryAgainButtonLabel = "TRY AGAIN";
 
             const recommendationsHeaderEl = document.createElement('h1');
             recommendationsHeaderEl.innerText = recommendationsHeader;
 
+            const tryAgainButtonLabelEl = document.createElement("button");
+            tryAgainButtonLabelEl.setAttribute("type", "submit");
+            tryAgainButtonLabelEl.onclick = function redirectToIndex() {
+                location.href = 'index.html';
+            }
+            tryAgainButtonLabelEl.setAttribute("value", "SUBMIT");
+            tryAgainButtonLabelEl.innerText = tryAgainButtonLabel;
+
             const musicCardHeader = document.createElement('div');
             musicCardHeader.classList.add('music-card-header');
             musicCardHeader.appendChild(recommendationsHeaderEl);
+            musicCardHeader.appendChild(tryAgainButtonLabelEl);
 
             const musicCardContainer = document.createElement('div');
             musicCardContainer.classList.add('music-card-container');

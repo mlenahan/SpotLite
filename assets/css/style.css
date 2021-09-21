@@ -164,7 +164,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   letter-spacing: .25em;
-  margin: 0 auto;
+  margin: auto;
   display: block;
   -webkit-appearance: none;
 }
@@ -207,6 +207,10 @@ input[type=submit]:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
   background-color: var(--dark-secondary);
+}
+
+.music-card-header{
+  display: flex;
 }
 
 .music-card-header > h1 {

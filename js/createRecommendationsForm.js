@@ -6,7 +6,7 @@ function createRecommendationsForm(genres) {
     const songLabel = "Song";
     const genreLabel = "Genre";
     const submitButtonLabel = "SUBMIT";
-
+    
     const newSongsTitleEL = document.createElement("h1");
     newSongsTitleEL.innerText = newSongsTitle;
 
