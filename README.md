@@ -125,20 +125,28 @@ Here I will highlight the main features I have included in SpotLite.
     - I have tested the responsiveness of my website on multiple browsers and devices.
     
 ### Form Page 
+
 ![image](readme-screenshots/am-i-responsive.png) 
 
-### iPhone
+### iPhone Form Page
+
 ![image](readme-screenshots/iphone-form.jpg)
+
+### iPhone Recommendations Page
 
 ![image](readme-screenshots/iphone-recommendations.jpg)
 
-### iPad
+### iPad Form Page
+
 ![image](readme-screenshots/ipad-form.jpg)
+
+### iPad Recommendations Page
 
 ![image](readme-screenshots/ipad-recommendations.jpg)
 
 
 ### Recommendations Page Desktop
+
 ![image](readme-screenshots/form-desktop.png)
 
 - There are no know issues with responsiveness across all devices and browsers I have tested.
