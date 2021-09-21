@@ -20,7 +20,7 @@ If you wish to gain access to the use of this app, please contact me at michael_
 
 Here is a video recording of the app in use if you do not wish to gain access but want to see it in action.
 
-[YouTube link to video](https://www.youtube.com/watch?v=TGS48JcPmIc&ab_channel=MichaelLenahan)
+[YouTube link to video](https://www.youtube.com/watch?v=JTDleBibUr4&ab_channel=MichaelLenahan)
 
 My site is designed around the principals of [Material Design](https://material.io/design).
 
@@ -31,6 +31,8 @@ My site is designed around the principals of [Material Design](https://material.
     - I created the design for the project using [Figma](https://www.figma.com/). This was a good oppertunity to develop the skills I had learned using Figma for the first time on my last project.
     - Here is a link to my figma file for this project [Figma](https://www.figma.com/file/hRjRB7sUTKK0itIYNlGBlH/SpotLite?node-id=0%3A1)
 
+    - The styling and some of the colours I have used are based around the design of the Spotify App
+
 ## Features
 
 Here I will highlight the main features I have included in SpotLite.
@@ -39,7 +41,7 @@ Here I will highlight the main features I have included in SpotLite.
 
 - __Recommendations Form__
     
-    ![image](readme-screenshots/recommendationsform.png)
+    ![image](readme-screenshots/form-feature.png)
 
     - As you open SpotLite, the first thing you will see is the recommendations form.
     - This form will allow the user to enter information about a song, artist and genre and get back the recommendations based on the information they have entered. 
@@ -114,18 +116,18 @@ Here I will highlight the main features I have included in SpotLite.
 ![image](readme-screenshots/am-i-responsive.png) 
 
 ### iPhone
-![image](readme-screenshots/iphone2.jpg)
+![image](readme-screenshots/iphone-form.jpg)
 
-![image](readme-screenshots/iphone.jpg)
+![image](readme-screenshots/iphone-recommendations.jpg)
 
 ### iPad
-![image](readme-screenshots/ipad1.png)
+![image](readme-screenshots/ipad-form.jpg)
 
-![image](readme-screenshots/ipad2.png)
+![image](readme-screenshots/ipad-recommendations.jpg)
 
 
 ### Recommendations Page Desktop
-![image](readme-screenshots/desktop-recommendations.jpg)
+![image](readme-screenshots/form-desktop.png)
 
 - There are no know issues with responsiveness across all devices and browsers I have tested.
 
