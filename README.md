@@ -33,6 +33,18 @@ My site is designed around the principals of [Material Design](https://material.
 
     - The styling and some of the colours I have used are based around the design of the Spotify App
 
+## User Experince
+
+- __Flow__
+
+    - [YouTube link to video](https://www.youtube.com/watch?v=JTDleBibUr4&ab_channel=MichaelLenahan)
+    - The flow of this site is available to view in this YouTube link above.
+    - Users land on the form page. Here they are asked to fill in the form with an artist, song name and genre.
+    - If the user is logged into Spotify, they will be brought to a page with their recommendations. The user can click the music cards which will redirect them to the song page on the Spotify browser version.
+    - If the user is not logged in, they will be redirected to a page asking them to log into Spotify. By clicking the buutton on the page, the user will be redirected to Spotify's own authetication page.
+    - Once the user logs in, they will be redirected back to the original form page where they will have to fill the form again and then they will be brought to the recommendations page
+    - If the user wishes to use another artist and song, they can click the 'TRY AGAIN' button and repeat the process
+
 ## Features
 
 Here I will highlight the main features I have included in SpotLite.
