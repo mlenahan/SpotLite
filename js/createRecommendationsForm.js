@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 function createRecommendationsForm(genres) {
     const newSongsTitle = "SpotLite";
-    const fillForm = "Get recommendations.";
+    const fillForm = "Get music recommendations from Spotify.";
     const artistLabel = "Artist";
     const songLabel = "Song";
     const genreLabel = "Genre";

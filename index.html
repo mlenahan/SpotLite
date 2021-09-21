@@ -75,12 +75,13 @@
             const parsedTracks = data.tracks.map(parseTrack);
             const root = document.getElementById('root');
             const recommendationsHeader = 'Your recommendations';
-            const tryAgainButtonLabel = "TRY AGAIN";
+            const tryAgainButtonLabel = 'TRY AGAIN';
 
             const recommendationsHeaderEl = document.createElement('h1');
             recommendationsHeaderEl.innerText = recommendationsHeader;
 
             const tryAgainButtonLabelEl = document.createElement("button");
+            tryAgainButtonLabelEl.id = 'tryAgainButton'
             tryAgainButtonLabelEl.setAttribute("type", "submit");
             tryAgainButtonLabelEl.onclick = function redirectToIndex() {
                 location.href = 'index.html';

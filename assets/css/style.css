@@ -169,15 +169,18 @@ button {
   -webkit-appearance: none;
 }
 
+#tryAgainButton {
+  margin-right: 5%;
+}
+
 input[type=text],
-input[type=password],
 select {
   width: 100%;
   padding: 1.5em;
   margin: 1em 0;
   display: inline-block;
   box-sizing: border-box;
-  background-color: var(--surface-main);
+  background-color: var(--secondary-text);
   -webkit-appearance: none;
 }
 
